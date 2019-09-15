@@ -1,5 +1,6 @@
 package com.example.triptrackr
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,10 +17,17 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    val friends_button : Button = findViewById(R.id.view_friends) as Button
+    val friends_button : Button = findViewById(R.id.view_friends);
 
-    friends_button.setOnClickListener {
-        val intent = Intent(this, Friends::class.java)
-        startActivity(intent)
-    }
+    friends_button.
+
+//    friends_button.setOnClickListener (object: View.OnClickListener {
+//        override fun onClick(view: View): Unit {
+//            startActivity(Intent(this, Friends::class.java))
+//        }
+//
+//        private fun Intent(onClickListener: View.OnClickListener, java: Class<Friends>): Context {
+//
+//        }
+//    })
 }
