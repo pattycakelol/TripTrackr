@@ -1,9 +1,11 @@
 package com.example.triptrackr
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.viewpager.widget.ViewPager
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.tabs.TabLayout
 
 class Trips : AppCompatActivity() {
@@ -21,8 +23,25 @@ class Trips : AppCompatActivity() {
         var tabLayout : TabLayout = findViewById(R.id.tabs) as TabLayout
         tabLayout.setupWithViewPager(mViewPager)
 
-        tabLayout.getTabAt(0)?.setIcon(R.drawable.ic_user)
-        tabLayout.getTabAt(1)?.setIcon(R.drawable.ic_friends)
+        tabLayout.getTabAt(0)?.setIcon(R.drawable.ic_trips_user)
+        tabLayout.getTabAt(1)?.setIcon(R.drawable.ic_trips_friends)
+
+        var bottomnNavigationView : BottomNavigationView = findViewById(R.id.bottomNavViewBar)
+        bottomnNavigationView.selectedItemId = R.id.ic_trips
+        bottomnNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.ic_friends -> {
+                    startActivity(Intent(this@Trips, Friends::class.java))
+                }
+                R.id.ic_home -> {
+                    startActivity(Intent(this@Trips, MainActivity::class.java))
+                }
+                R.id.ic_trips -> {
+                    // Do nothing (already on this page)
+                }
+            }
+            return@setOnNavigationItemSelectedListener true
+        }
     }
 
     fun setupViewPager(viewPager : ViewPager) {

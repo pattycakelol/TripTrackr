@@ -56,45 +56,17 @@
             android:layout_height="50dp"
             android:id="@+id/relLayoutBottomBar"
             android:layout_alignParentBottom="true">
+
             <!--Bottom Toolbar-->
-            <com.google.android.material.appbar.AppBarLayout
-                android:layout_height="wrap_content"
+            <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:layout_width="match_parent"
-                android:layout_gravity="bottom">
+                android:layout_height="match_parent"
+                android:id="@+id/bottomNavViewBar"
+                android:background="@drawable/white_grey_border_top"
+                app:menu="@menu/bottom_navigation_menu"
+                app:itemHorizontalTranslationEnabled="false">
 
-                <androidx.appcompat.widget.Toolbar
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/toolbarBottom"
-                    android:background="@drawable/white_grey_border_top">
-
-                    <androidx.appcompat.widget.LinearLayoutCompat
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:weightSum="100"
-                        android:orientation="horizontal">
-
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="33"
-                            android:src="@drawable/ic_friends"/>
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="33"
-                            android:src="@drawable/ic_home"/>
-                        <androidx.appcompat.widget.AppCompatImageView
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="33"
-                            android:src="@drawable/ic_trips"/>
-
-                    </androidx.appcompat.widget.LinearLayoutCompat>
-
-                </androidx.appcompat.widget.Toolbar>
-
-            </com.google.android.material.appbar.AppBarLayout>
+            </com.google.android.material.bottomnavigation.BottomNavigationView>
 
         </RelativeLayout>
 
