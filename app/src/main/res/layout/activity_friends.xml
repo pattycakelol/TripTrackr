@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Friends">
 
     <RelativeLayout
@@ -18,6 +19,16 @@
             android:layout_height="50dp"
             android:id="@+id/relLayoutTopBar"
             android:layout_alignParentTop="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Friends"
+                android:textSize="35dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:background="@drawable/white_grey_border_bottom"/>
+
 
             <!--Top Toolbar-->
             <com.google.android.material.appbar.AppBarLayout
@@ -43,7 +54,8 @@
                 android:layout_height="wrap_content"
                 android:text="Friends"
                 android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true">
+                android:layout_centerVertical="true"
+                android:id="@+id/testText">
 
             </androidx.appcompat.widget.AppCompatTextView>
 
@@ -63,7 +75,8 @@
                 android:id="@+id/bottomNavViewBar"
                 android:background="@drawable/white_grey_border_top"
                 app:menu="@menu/bottom_navigation_menu"
-                app:itemHorizontalTranslationEnabled="false">
+                app:itemHorizontalTranslationEnabled="false"
+                app:labelVisibilityMode="selected">
 
             </com.google.android.material.bottomnavigation.BottomNavigationView>
 

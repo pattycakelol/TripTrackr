@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Trips">
+    tools:context=".Home">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -24,12 +24,9 @@
             <com.google.android.material.appbar.AppBarLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <com.google.android.material.tabs.TabLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tabs"
-                    android:background="@drawable/white_grey_border_bottom">
-                </com.google.android.material.tabs.TabLayout>
+
+
+
             </com.google.android.material.appbar.AppBarLayout>
 
         </RelativeLayout>
@@ -42,12 +39,32 @@
             android:layout_below="@+id/relLayoutTopBar"
             android:layout_above="@+id/relLayoutBottomBar">
 
-            <!--ViewPager-->
-            <androidx.viewpager.widget.ViewPager
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/container">
-            </androidx.viewpager.widget.ViewPager>
+            <Button
+                android:id="@+id/track"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Track Trip"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="167dp"
+                android:layout_marginLeft="167dp"
+                android:layout_marginTop="103dp"
+                app:layout_constraintBottom_toTopOf="@+id/track"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/ic_launcher"/>
 
         </RelativeLayout>
 

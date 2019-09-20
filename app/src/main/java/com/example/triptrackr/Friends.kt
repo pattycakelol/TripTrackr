@@ -11,7 +11,6 @@ class Friends : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_friends)
 
-
         var bottomnNavigationView : BottomNavigationView = findViewById(R.id.bottomNavViewBar)
         bottomnNavigationView.selectedItemId = R.id.ic_friends
         bottomnNavigationView.setOnNavigationItemSelectedListener { item ->
@@ -20,7 +19,7 @@ class Friends : AppCompatActivity() {
                     // Do nothing (already on this page)
                 }
                 R.id.ic_home -> {
-                    startActivity(Intent(this@Friends, MainActivity::class.java))
+                    startActivity(Intent(this@Friends, Home::class.java))
                 }
                 R.id.ic_trips -> {
                     startActivity(Intent(this@Friends, Trips::class.java))
@@ -28,5 +27,12 @@ class Friends : AppCompatActivity() {
             }
             return@setOnNavigationItemSelectedListener true
         }
+    }
+    override fun onResume() {
+        super.onResume()
+    }
+
+    override fun onBackPressed() {
+        startActivity(Intent(this@Friends, Home::class.java))
     }
 }

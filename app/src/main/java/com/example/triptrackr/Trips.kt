@@ -26,7 +26,7 @@ class Trips : AppCompatActivity() {
         tabLayout.getTabAt(0)?.setIcon(R.drawable.ic_trips_user)
         tabLayout.getTabAt(1)?.setIcon(R.drawable.ic_trips_friends)
 
-        var bottomnNavigationView : BottomNavigationView = findViewById(R.id.bottomNavViewBar)
+        var bottomnNavigationView : BottomNavigationView  = findViewById(R.id.bottomNavViewBar)
         bottomnNavigationView.selectedItemId = R.id.ic_trips
         bottomnNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
@@ -34,7 +34,7 @@ class Trips : AppCompatActivity() {
                     startActivity(Intent(this@Trips, Friends::class.java))
                 }
                 R.id.ic_home -> {
-                    startActivity(Intent(this@Trips, MainActivity::class.java))
+                    startActivity(Intent(this@Trips, Home::class.java))
                 }
                 R.id.ic_trips -> {
                     // Do nothing (already on this page)
@@ -42,6 +42,14 @@ class Trips : AppCompatActivity() {
             }
             return@setOnNavigationItemSelectedListener true
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+    }
+
+    override fun onBackPressed() {
+        startActivity(Intent(this@Trips, Home::class.java))
     }
 
     fun setupViewPager(viewPager : ViewPager) {

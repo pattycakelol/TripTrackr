@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/input_id_register"
+        android:hint="ID"
+        android:inputType="textNoSuggestions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:met_iconRight="@drawable/ic_user"
+        app:met_iconPadding="0dp"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/input_name_register"
+        android:hint="Name"
+        android:inputType="textNoSuggestions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:met_iconRight="@drawable/ic_user"
+        app:met_iconPadding="0dp"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/input_password_register"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:met_iconRight="@drawable/ic_password"
+        app:met_iconPadding="0dp"/>
+
+</LinearLayout>
