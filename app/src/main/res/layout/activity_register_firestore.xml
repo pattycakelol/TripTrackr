@@ -7,6 +7,17 @@
     android:background="@android:color/holo_green_light"
     tools:context=".RegisterFirestore">
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/register_imageview_photo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:civ_border_width="3dp"
+        app:civ_border_color="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/register_btn_photo"
+        app:layout_constraintEnd_toEndOf="@+id/register_btn_photo"
+        app:layout_constraintStart_toStartOf="@id/register_btn_photo"
+        app:layout_constraintTop_toTopOf="@+id/register_btn_photo" />
+
     <Button
         android:id="@+id/register_btn_photo"
         android:layout_width="150dp"
