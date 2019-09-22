@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.triptrackr">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,10 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-
-        <activity android:name=".Login">
-
-        </activity>
+        <activity android:name=".LoginFirestore"></activity>
+        <activity android:name=".RegisterFirestore" />
+        <activity android:name=".Login" />
         <activity
             android:name=".Home"
             android:launchMode="singleTop">
@@ -27,10 +26,10 @@
         </activity>
         <activity
             android:name=".Trips"
-            android:launchMode="singleTop"></activity>
+            android:launchMode="singleTop" />
         <activity
             android:name=".Friends"
-            android:launchMode="singleTop"></activity>
+            android:launchMode="singleTop" />
     </application>
 
 </manifest>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "876734653956",
+    "firebase_url": "https://triptrackr-6763a.firebaseio.com",
+    "project_id": "triptrackr-6763a",
+    "storage_bucket": "triptrackr-6763a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:876734653956:android:0ec25cacbeb802733af751",
+        "android_client_info": {
+          "package_name": "com.example.triptrackr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "876734653956-n87lvkfppnda33fc6nh4miejktinuunh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5egqDlbKyMaiY8wZ2_eMsHGRQVf6dKgE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "876734653956-n87lvkfppnda33fc6nh4miejktinuunh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

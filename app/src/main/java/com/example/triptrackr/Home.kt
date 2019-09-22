@@ -32,7 +32,7 @@ class Home : AppCompatActivity() {
 
         val btn : Button = findViewById(R.id.track)
         btn.setOnClickListener {
-            startActivity(Intent(this@Home, Login::class.java))
+            startActivity(Intent(this@Home, RegisterFirestore::class.java))
         }
     }
 
