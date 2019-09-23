@@ -33,7 +33,9 @@ class RegisterFirestore : AppCompatActivity() {
 
         register_textview_login.setOnClickListener {
             // Launch LoginFirestore
-            startActivity(Intent(this, LoginFirestore::class.java))
+            val intent = Intent(this, LoginFirestore::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
         }
 
         register_btn_registration.setOnClickListener {
@@ -121,6 +123,10 @@ class RegisterFirestore : AppCompatActivity() {
         ref.child("users").child(uid).setValue(User(register_username.text.toString(), profileImageUrl))
             .addOnSuccessListener {
                 Log.d("RegisterFirestore", "User created in Firebase database")
+
+                val intent = Intent(this, Home::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
             }
             .addOnFailureListener {
                 Log.d("RegisterFirestore", "User unable to be created in Firebase database")

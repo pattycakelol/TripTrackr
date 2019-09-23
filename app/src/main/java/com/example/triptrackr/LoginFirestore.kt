@@ -1,5 +1,6 @@
 package com.example.triptrackr
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -18,7 +19,9 @@ class LoginFirestore : AppCompatActivity() {
         }
 
         login_textview_register.setOnClickListener {
-            finish()
+            val intent = Intent(this, RegisterFirestore::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
         }
     }
 
@@ -39,6 +42,9 @@ class LoginFirestore : AppCompatActivity() {
                 if (!it.isSuccessful) return@addOnCompleteListener
                 Log.d("LoginFirestore", "User logged in with uid: ${it.result?.user?.uid}")
                 Toast.makeText(this, "User logged in with uid: ${it.result?.user?.uid}", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this, Home::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
             }
             .addOnFailureListener {
                 Log.d("LoginFirestore", "Failed to login user: ${it.message}")

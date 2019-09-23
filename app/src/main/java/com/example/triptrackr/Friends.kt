@@ -19,10 +19,14 @@ class Friends : AppCompatActivity() {
                     // Do nothing (already on this page)
                 }
                 R.id.ic_home -> {
-                    startActivity(Intent(this@Friends, Home::class.java))
+                    val intent = Intent(this, Home::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    startActivity(intent)
                 }
                 R.id.ic_trips -> {
-                    startActivity(Intent(this@Friends, Trips::class.java))
+                    val intent = Intent(this, Trips::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    startActivity(intent)
                 }
             }
             return@setOnNavigationItemSelectedListener true
@@ -33,6 +37,8 @@ class Friends : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        startActivity(Intent(this@Friends, Home::class.java))
+        val intent = Intent(this, Home::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+        startActivity(intent)
     }
 }

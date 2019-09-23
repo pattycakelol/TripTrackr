@@ -31,10 +31,14 @@ class Trips : AppCompatActivity() {
         bottomnNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.ic_friends -> {
-                    startActivity(Intent(this@Trips, Friends::class.java))
+                    val intent = Intent(this, Friends::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    startActivity(intent)
                 }
                 R.id.ic_home -> {
-                    startActivity(Intent(this@Trips, Home::class.java))
+                    val intent = Intent(this, Home::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    startActivity(intent)
                 }
                 R.id.ic_trips -> {
                     // Do nothing (already on this page)
@@ -49,7 +53,9 @@ class Trips : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        startActivity(Intent(this@Trips, Home::class.java))
+        val intent = Intent(this, Home::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+        startActivity(intent)
     }
 
     fun setupViewPager(viewPager : ViewPager) {
