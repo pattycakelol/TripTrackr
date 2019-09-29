@@ -63,7 +63,7 @@ class RegisterFirestore : AppCompatActivity() {
     }
 
     private fun performRegister() {
-        val username = register_username.text.toString()
+//        val username = register_username.text.toString()
         val email = register_email.text.toString()
         val password = register_password.text.toString()
 
@@ -132,6 +132,14 @@ class RegisterFirestore : AppCompatActivity() {
                 Log.d("RegisterFirestore", "User unable to be created in Firebase database")
             }
     }
+
+    override fun onBackPressed() {
+        val intent = Intent(this, LoginFirestore::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+        startActivity(intent)
+    }
 }
 
-data class User(val username: String, val profileImageUrl: String)
+data class User(val username: String, val profileImageUrl: String) {
+    constructor() : this("", "")
+}

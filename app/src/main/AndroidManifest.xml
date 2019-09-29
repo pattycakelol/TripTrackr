@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Login" />
         <activity
             android:name=".Home"
             android:launchMode="singleTop">
@@ -23,12 +22,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Trips"
-            android:launchMode="singleTop" />
-        <activity
-            android:name=".Friends"
-            android:launchMode="singleTop" />
-        <activity
             android:name=".LoginFirestore">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,6 +31,12 @@
         </activity>
         <activity
             android:name=".RegisterFirestore" />
+        <activity
+            android:name=".Trips"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".Friends"
+            android:launchMode="singleTop" />
     </application>
 
 </manifest>

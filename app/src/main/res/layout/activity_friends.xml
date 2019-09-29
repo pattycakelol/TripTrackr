@@ -49,15 +49,11 @@
             android:layout_below="@+id/relLayoutTopBar"
             android:layout_above="@+id/relLayoutBottomBar">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Friends"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:id="@+id/testText">
-
-            </androidx.appcompat.widget.AppCompatTextView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/friends_recyclerview"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
         </RelativeLayout>
 

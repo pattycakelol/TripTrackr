@@ -12,6 +12,9 @@ class LoginFirestore : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        verifyUserLoggedIn()
+
         setContentView(R.layout.activity_login_firestore)
 
         login_btn_login.setOnClickListener {
@@ -50,5 +53,22 @@ class LoginFirestore : AppCompatActivity() {
                 Log.d("LoginFirestore", "Failed to login user: ${it.message}")
                 Toast.makeText(this, "Failed to login user: ${it.message}", Toast.LENGTH_SHORT).show()
             }
+    }
+
+    override fun onBackPressed() {
+        val intent = Intent(this, RegisterFirestore::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+        startActivity(intent)
+        // Do nothing
+    }
+
+    private fun verifyUserLoggedIn() {
+        val uid = FirebaseAuth.getInstance().uid
+        if (uid != null) {
+            val intent = Intent(this, Home::class.java)
+            // overrided onBackPressed() in login, so no need for flags
+//            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+        }
     }
 }

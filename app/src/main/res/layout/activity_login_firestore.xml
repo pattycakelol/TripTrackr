@@ -45,7 +45,7 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/rounded_button"
+        android:background="@drawable/rounded_button_dark"
         android:textColor="@android:color/white"
         android:textStyle="bold"
         android:text="Login"
