@@ -139,7 +139,3 @@ class RegisterFirestore : AppCompatActivity() {
         startActivity(intent)
     }
 }
-
-data class User(val username: String, val profileImageUrl: String) {
-    constructor() : this("", "")
-}
