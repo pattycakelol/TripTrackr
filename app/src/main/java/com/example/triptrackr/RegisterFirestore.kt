@@ -120,7 +120,7 @@ class RegisterFirestore : AppCompatActivity() {
 
         Log.d("RegisterFirestore", "Image url received: $profileImageUrl")
 
-        ref.child("users").child(uid).setValue(User(register_username.text.toString(), profileImageUrl))
+        ref.child("users").child(uid).setValue(User(uid, register_username.text.toString(), profileImageUrl))
             .addOnSuccessListener {
                 Log.d("RegisterFirestore", "User created in Firebase database")
 

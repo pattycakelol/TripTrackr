@@ -1,5 +1,9 @@
 package com.example.triptrackr
 
-data class User(val username: String, val profileImageUrl: String) {
-    constructor() : this("", "")
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
+data class User(val uid: String, val username: String, val profileImageUrl: String): Parcelable {
+    constructor() : this("", "", "")
 }

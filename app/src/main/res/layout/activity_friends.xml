@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Friends"
-                android:textSize="35dp"
+                android:textSize="35sp"
                 android:textAlignment="center"
                 android:textColor="@color/colorPrimaryDark"
                 android:background="@drawable/white_grey_border_bottom"/>
