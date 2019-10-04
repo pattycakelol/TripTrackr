@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_friend_view.*
-import kotlinx.android.synthetic.main.user_row.view.*
 
 class Friend_view : AppCompatActivity() {
 
