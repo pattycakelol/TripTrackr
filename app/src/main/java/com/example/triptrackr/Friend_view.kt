@@ -13,7 +13,7 @@ class Friend_view : AppCompatActivity() {
 
         val user = intent.getParcelableExtra<User>(Friends.USER_KEY)
         friend_view_username.text = user.username
-        Picasso.get().load(user.profileImageUrl).into(friend_view_icon)
+        Picasso.get().load(user.profileImageUrl).into(viewHolder.itemView.friend_view_icon)
 
         friend_view_back.setOnClickListener {
             finish()
